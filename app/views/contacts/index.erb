@@ -1,0 +1,16 @@
+<style>
+form { display: inline; }
+</style> 
+
+<h1>All Contacts</h1>
+<div class="contacts">
+  <ul>
+    <% @contacts.each do |contact| %>
+      <li><%= "#{contact.id} - #{contact.email}" %> - 
+      <a href="/contacts/<%= contact.id %>">Show</a> - 
+      <a href="/contacts/<%= contact.id %>/edit">Edit</a>
+      <%= erb :'contacts/_delete', layout: false, locals: { contact: contact } %>
+      </li>
+    <% end %>
+  </ul>
+</div>

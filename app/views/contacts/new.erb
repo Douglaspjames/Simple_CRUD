@@ -1,0 +1,13 @@
+<form method="get" action="/contacts">
+    <button type="submit">HOME</button>
+</form>
+
+<style>form div { padding: 10px; }</style>
+
+<form action="/contacts" method="post">
+  <%= erb :'contacts/_form_fields', layout: false %>
+  <div>
+    <input name="commit it dingleberry" type="submit" value="Create Contact Dude" />
+  </div>
+</form>
+
